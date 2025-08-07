@@ -1,0 +1,6 @@
+docker run -d \
+  --hostname tejas-joshi \
+  --name my-ubuntu-server \
+  -p 2222:22 \
+  -v /home/tejas-joshi/Documents/Server/ubuntu-server-data:/data \
+  my-ubuntu-server
