@@ -2,8 +2,9 @@ sudo docker run -d \
   --hostname tejas-joshi \
   --name my-ubuntu-server \
   -p 2222:22 \
-  -v /home/tejas-joshi/Documents/Server/ubuntu-server-data:/data \
+  -v /home/sarvatra.in/tejas.joshi/Documents/container-server/ServerData/Ubuntu/data:/data \
   my-ubuntu-server
 
 
 Login :-  ssh root@localhost -p 2222
+Login :-  ssh root@<containerIp>
