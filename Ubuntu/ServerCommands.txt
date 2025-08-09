@@ -1,9 +1,39 @@
 sudo docker run -d \
-  --hostname tejas-joshi \
+  --hostname ubuntu \
   --name my-ubuntu-server \
   -p 2222:22 \
-  -v /home/sarvatra.in/tejas.joshi/Documents/container-server/ServerData/Ubuntu/data:/data \
+  -v /home/tejas-joshi/Documents/Server/ubuntu-server-data:/data \
+  -v /home/tejas-joshi/Documents/Server/ubuntu-server-data:/etc \
+  -v /home/tejas-joshi/Documents/Server/ubuntu-server-data:/home \
+  -v /home/tejas-joshi/Documents/Server/ubuntu-server-data:/lib \
+  -v /home/tejas-joshi/Documents/Server/ubuntu-server-data:/usr \
+  -v /home/tejas-joshi/Documents/Server/ubuntu-server-data:/var \
   my-ubuntu-server
+
+
+sudo docker run -d \
+  --hostname ubuntu \
+  --name my-ubuntu-server \
+  -p 2222:22 \
+  -v ubuntu_data:/data \
+  -v ubuntu_etc:/etc \
+  -v ubuntu_home:/home \
+  -v ubuntu_lib:/lib \
+  -v ubuntu_usr:/usr \
+  -v ubuntu_var:/var \
+  my-ubuntu-server
+
+
+Create Volume :-  
+
+sudo docker volume create ubuntu_data \
+sudo docker volume create ubuntu_etc \ 
+sudo docker volume create ubuntu_home \ 
+sudo docker volume create ubuntu_lib \
+sudo docker volume create ubuntu_usr \
+sudo docker volume create ubuntu_var
+
+Volume Location :-  /var/lib/docker/volume
 
 
 Login :-  ssh root@localhost -p 2222
