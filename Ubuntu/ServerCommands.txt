@@ -38,3 +38,21 @@ Volume Location :-  /var/lib/docker/volume
 
 Login :-  ssh root@localhost -p 2222
 Login :-  ssh root@<containerIp>
+
+1) Check Staus of Service :-  service <serviceName> status
+                              service ssh status 
+2) Start Service          :-  service <serviceName> Start
+                              server ssh start
+3) Restart Service        :-  service <serviceName> restart
+                              service ssh restart 
+2) Stop Service           :-  service <serviceName> stop
+                              server ssh stop
+
+Start ssh service on host :-    sudo apt install openssh-server
+                                sudo systemctl status ssh 
+Stop ssh service on host :-     sudo systemctl stop ssh.socket
+                                sudo systemctl disable ssh.socket
+                                sudo systemctl stop ssh
+                                sudo systemctl disable ssh
+Status ssh service on host :-   systemctl status ssh
+                                systemctl status ssh.socket
